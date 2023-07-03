@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="CV.Maria Gisela Dora kelen", page_icon=":tada:", layout="wide")
 
 ######
 # Header
