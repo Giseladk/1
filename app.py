@@ -37,10 +37,9 @@ if st.session_state["file"] == "done":
 		st.write("Hello, here are more details about my field that you were interested in.")
 
 		if uploaded_file is None:
-			st.file(file_browser)
+			st.file_uploader(file_browser)
 		else:
-			st.file(uploaded_file)
-
+			st.file_uploader(uploaded_file)
 
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
