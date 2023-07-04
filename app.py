@@ -20,7 +20,8 @@ st.image(image, width=300)
 def change_file_state():
 	st.session_state["file"]="done"
 
-uploaded_file = col2.file_uploader("Upload a file",on_change=change_file_state)
+uploaded_file = col2.file_uploader("Upload a file", on_change=change_file_state)
+browsing_file = col2.file_uploader("Browsing a file", on_change=change_file_state)
 
 if st.session_state["file"] == "done":
 	progress_bar = col2.progress(0)
@@ -37,7 +38,7 @@ if st.session_state["file"] == "done":
 		st.write("Hello, here are more details about my field that you were interested in.")
 
 		if uploaded_file is None:
-			st.file_uploader(file_browser)
+			st.file_uploader(browsing_file)
 		else:
 			st.file_uploader(uploaded_file)
 
