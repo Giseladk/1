@@ -14,7 +14,7 @@ col1.markdown(" Here is some info about me! ")
 image = Image.open("G.png")
 st.image(image, width=300)
 
-col3.metric(label="Welcome", value="My Page", delta=":tada:")
+col3.metric(label="Welcome", value="My Page")
 
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
