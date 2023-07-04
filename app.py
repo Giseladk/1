@@ -6,8 +6,6 @@ st.set_page_config(page_title="CV.Maria Gisela Dora kelen", page_icon=":tada:", 
 
 ######
 # Header
-if "file" not in st.session_state:
-	st.session_state["file"]="not done"
 
 col1,col2,col3 = st.columns([1,2,1]) 
 
@@ -17,29 +15,7 @@ col1.markdown(" Here is some info about me! ")
 image = Image.open("G.png")
 st.image(image, width=300)
 
-def change_file_state():
-	st.session_state["file"]="done"
-
-uploaded_file = col2.file_uploader("Upload a file", on_change=change_file_state)
-
-if st.session_state["file"] == "done":
-	progress_bar = col2.progress(0)
-
-	for perc_completed in range(100):
-		time.sleep(0.05)
-		progress_bar.progress(perc_completed+1)
-	
-	col2.success("File uploaded successfully!")
-
-	col3.metric(label="Temperature", value="30 degree celcius", delta="3 degree celcius")
-
-	with st.expander("Click to read more"):
-		st.write("Hello, here are more details about my field that you were interested in.")
-
-		if uploaded_file is None:
-			st.file_uploader(uploaded_file)
-		else:
-			st.file_uploader("")
+col3.metric(label="Temperature", value="30 degree celcius", delta="3 degree celcius")
 
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
