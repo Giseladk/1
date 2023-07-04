@@ -41,6 +41,7 @@ if st.session_state["file"] == "done":
 		else:
 			st.upload(uploaded_file)
 
+
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
 nama = ["Maria Gisela Dora Kelen"]
