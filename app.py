@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 from PIL import Image
 
 st.set_page_config(page_title="CV.Maria Gisela Dora kelen", page_icon=":tada:", layout="wide")
@@ -15,7 +14,7 @@ col1.markdown(" Here is some info about me! ")
 image = Image.open("G.png")
 st.image(image, width=300)
 
-col3.metric(label="Temperature", value="30 degree celcius", delta="3 degree celcius")
+col3.metric(label="Welcome", value="My Page", delta=:tada:)
 
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
