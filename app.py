@@ -1,19 +1,29 @@
 import streamlit as st
-import pandas as pd
+import time
 from PIL import Image
 
 st.set_page_config(page_title="CV.Maria Gisela Dora kelen", page_icon=":tada:", layout="wide")
 
 ######
 # Header
-st.write("""
-	# Maria Gisela Dora Kelen :wave:
-	#####  'RESUME'
-	"""
-	)
+col1,col2,col3 = st.columns([1,2,1]) 
+
+col1.markdown(" # Maria Gisela Dora Kelen :wave: ")
+col1.markdown(" Here is some info about me! ")
 
 image = Image.open("G.png")
 st.image(image, width=300)
+
+uploaded_file = col2.file_uploader("Upload a file")
+
+progress_bar = col2.progress(0)
+for perc_completed in range(100):
+	time.sleep(0.05)
+	progress_bar.progress(perc_completed+1)
+	
+col2.success("File uploaded successfully!")
+
+col3.metric(label="Temperature", value="30 degree celcius", delta="3 degree celcius")
 
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
