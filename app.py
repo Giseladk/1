@@ -8,13 +8,16 @@ st.set_page_config(page_title="CV.Maria Gisela Dora kelen", page_icon=":tada:", 
 
 col1,col2,col3 = st.columns([1,2,1]) 
 
-col1.markdown(" # Maria Gisela Dora Kelen :wave: ")
+col1.metric(label="Welcome to", value="My Page")
+
+
+col1.header(" # Maria Gisela Dora Kelen :wave: ")
 col1.markdown(" Here is some info about me! ")
 
 image = Image.open("G.png")
 st.image(image, width=300)
 
-col3.metric(label="Welcome to", value="My Page")
+col1.metric(label="Welcome to", value="My Page")
 
 st.markdown("## Profil", unsafe_allow_html=True)
 st.write("Nama :")
