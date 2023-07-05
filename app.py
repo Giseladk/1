@@ -11,7 +11,7 @@ col1,col2,col3 = st.columns([1,2,1])
 col1.metric(label="Welcome to", value="My Page")
 
 
-col1.header(" # Maria Gisela Dora Kelen :wave: ")
+st.header(" Maria Gisela Dora Kelen :wave: ")
 col1.markdown(" Here is some info about me! ")
 
 image = Image.open("G.png")
